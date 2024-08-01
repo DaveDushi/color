@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .form-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Color Palette Feedback Form</h1>
+        <form action="/generate/submit" method="post">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="use">What is the primary use of this color palette?</label>
+                <textarea id="use" name="use" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="audience">Who is the intended audience or user of this color palette?</label>
+                <textarea id="audience" name="audience" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="cultural">Are there any cultural or regional considerations that should influence the color choices?</label>
+                <textarea id="cultural" name="cultural" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="style">Do you prefer a modern, classic, minimalist, or vibrant style?</label>
+                <select id="style" name="style" required>
+                    <option value="modern">Modern</option>
+                    <option value="classic">Classic</option>
+                    <option value="minimalist">Minimalist</option>
+                    <option value="vibrant">Vibrant</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="specificColors">Are there any specific colors you want to include or avoid?</label>
+                <textarea id="specificColors" name="specificColors" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="accessibility">Do you need the palette to meet specific accessibility standards, such as WCAG guidelines for contrast?</label>
+                <select id="accessibility" name="accessibility" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="mood">What mood or emotion do you want the palette to evoke?</label>
+                <textarea id="mood" name="mood" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="brand">If this is for branding, what are the key attributes of your brand?</label>
+                <textarea id="brand" name="brand" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="colorCount">How many colors do you need in the palette?</label>
+                <input type="number" id="colorCount" name="colorCount" required>
+            </div>
+
+            <div class="form-group">
+                <label for="medium">In what medium will the colors be used?</label>
+                <textarea id="medium" name="medium" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="colorHarmonies">Do you have a preference for certain color harmonies?</label>
+                <input type="text" id="colorHarmonies" name="colorHarmonies" required>
+            </div>
+
+            <div class="form-group">
+                <label for="marketingEmails">
+                    <input type="checkbox" id="marketingEmails" name="marketingEmails">
+                    Would you like to receive marketing emails from us?
+                </label>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
