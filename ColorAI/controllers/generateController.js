@@ -42,7 +42,7 @@ export const generate = async (req, res) => {
 
     const colorList = message.split("\n").map((color) => color.trim());
 
-    const response = await sendEmail("amati.gavriel@gmail.com", colorList);
+    const response = await sendEmail(email, colorList);
 
     res.status(200).json({ message });
   } catch (error) {
